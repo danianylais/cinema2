@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSite - Descubra seu filme ideal</title>
+    <!-- Link para o CSS (vamos criar depois) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes e ícones legais -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- ==================== MENU FIXO NO TOPO ==================== -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-film"></i> CineSite
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#historia">História</a></li>
+                <li><a href="#recomendacao">Descubra seu filme</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#interacao">Participe</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== SEÇÃO DE INTRODUÇÃO ==================== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo ao mundo do Cinema!</h1>
+            <p>Explore a história, descubra filmes feitos para você e teste seus conhecimentos.</p>
+            <a href="#recomendacao" class="btn">Começar aventura</a>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO HISTÓRIA DO CINEMA ==================== -->
+    <section id="historia" class="historia">
+        <h2>🎬 História do Cinema</h2>
+        <div class="timeline">
+            <!-- Slide 1: Início -->
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="https://via.placeholder.com/300x200/000000/ffffff?text=1895+Irmãos+Lumière" alt="Irmãos Lumière">
+                </div>
+                <div class="timeline-text">
+                    <h3>1895 - O Nascimento</h3>
+                    <p>Os irmãos Lumière realizam a primeira projeção pública cinematográfica em Paris.</p>
+                </div>
+            </div>
+            <!-- Slide 2: Cinema mudo -->
+            <div class="timeline-item reverse">
+                <div class="timeline-img">
+                    <img src="https://via.placeholder.com/300x200/841818/ffffff?text=Charles+Chaplin" alt="Charles Chaplin">
+                </div>
+                <div class="timeline-text">
+                    <h3>Década de 1910 - Cinema Mudo</h3>
+                    <p>Astros como Charles Chaplin encantam o mundo sem palavras.</p>
+                </div>
+            </div>
+            <!-- Slide 3: Cor e som -->
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="https://via.placeholder.com/300x200/d72323/ffffff?text=1927+O+Cantor+de+Jazz" alt="O Cantor de Jazz">
+                </div>
+                <div class="timeline-text">
+                    <h3>1927 - Chegam o Som e a Cor</h3>
+                    <p>"O Cantor de Jazz" é o primeiro filme com som sincronizado. Logo depois, as cores invadem as telas.</p>
+                </div>
+            </div>
+            <!-- Slide 4: Era de Ouro -->
+            <div class="timeline-item reverse">
+                <div class="timeline-img">
+                    <img src="https://via.placeholder.com/300x200/c00707/ffffff?text=1939+...E+o+Vento+Levou" alt="...E o Vento Levou">
+                </div>
+                <div class="timeline-text">
+                    <h3>1930-1950 - Era de Ouro de Hollywood</h3>
+                    <p>Surgem os grandes estúdios e clássicos como "...E o Vento Levou".</p>
+                </div>
+            </div>
+            <!-- Slide 5: Novas ondas -->
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="https://via.placeholder.com/300x200/ff4400/ffffff?text=Nouvelle+Vague" alt="Nouvelle Vague">
+                </div>
+                <div class="timeline-text">
+                    <h3>1960 - Revoluções Mundiais</h3>
+                    <p>Movimentos como a Nouvelle Vague francesa e o Cinema Novo brasileiro trazem novas linguagens.</p>
+                </div>
+            </div>
+            <!-- Slide 6: Blockbusters -->
+            <div class="timeline-item reverse">
+                <div class="timeline-img">
+                    <img src="https://via.placeholder.com/300x200/e6501b/ffffff?text=1975+Tubarão" alt="Tubarão">
+                </div>
+                <div class="timeline-text">
+                    <h3>1975 - Nascimento dos Blockbusters</h3>
+                    <p>"Tubarão" de Spielberg inaugura a era dos grandes sucessos de bilheteria.</p>
+                </div>
+            </div>
+            <!-- Slide 7: Efeitos digitais -->
+            <div class="timeline-item">
+                <div class="timeline-img">
+                    <img src="https://via.placeholder.com/300x200/740a03/ffffff?text=1993+Jurassic+Park" alt="Jurassic Park">
+                </div>
+                <div class="timeline-text">
+                    <h3>1990 - Revolução Digital</h3>
+                    <p>"Jurassic Park" e "Toy Story" mostram o poder dos efeitos gerados por computador.</p>
+                </div>
+            </div>
+            <!-- Slide 8: Streaming -->
+            <div class="timeline-item reverse">
+                <div class="timeline-img">
+                    <img src="https://via.placeholder.com/300x200/8ce4ff/000000?text=Streaming" alt="Streaming">
+                </div>
+                <div class="timeline-text">
+                    <h3>2010 - Era do Streaming</h3>
+                    <p>Netflix, Amazon e outras plataformas mudam a forma de assistir filmes.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Som de claquete (escondido, mas pode ser acionado no JS) -->
+        <audio id="somClaquete" preload="auto">
+            <source src="https://www.soundjay.com/misc/sounds/clapperboard-1.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+        </audio>
+    </section>
+
+    <!-- ==================== SEÇÃO RECOMENDAÇÃO DE FILMES ==================== -->
+    <section id="recomendacao" class="recomendacao">
+        <h2>🎥 Descubra o filme perfeito para você</h2>
+        <div class="form-box">
+            <form id="formRecomendacao">
+                <label for="idade">Qual sua idade?</label>
+                <input type="number" id="idade" name="idade" min="0" max="120" required>
+
+                <label for="genero">Que gênero você mais gosta?</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Selecione...</option>
+                    <option value="acao">Ação</option>
+                    <option value="comedia">Comédia</option>
+                    <option value="drama">Drama</option>
+                    <option value="ficcao">Ficção Científica</option>
+                    <option value="terror">Terror</option>
+                    <option value="animacao">Animação</option>
+                </select>
+
+                <label for="humor">Como você está se sentindo hoje?</label>
+                <select id="humor" name="humor" required>
+                    <option value="">Selecione...</option>
+                    <option value="feliz">Feliz</option>
+                    <option value="triste">Triste</option>
+                    <option value="animado">Animado</option>
+                    <option value="reflexivo">Reflexivo</option>
+                    <option value="assustado">Quero me divertir</option>
+                </select>
+
+                <button type="submit" class="btn">Recomendar filme</button>
+            </form>
+            <div id="resultadoRecomendacao" class="resultado"></div>
+        </div>
+        <!-- Gráfico simples de popularidade de gêneros (usando CSS) -->
+        <div class="grafico">
+            <h3>Gêneros mais populares (votos dos visitantes)</h3>
+            <div class="barra-container">
+                <span>Ação</span> <div class="barra" style="width:80%">80%</div>
+            </div>
+            <div class="barra-container">
+                <span>Comédia</span> <div class="barra" style="width:70%">70%</div>
+            </div>
+            <div class="barra-container">
+                <span>Drama</span> <div class="barra" style="width:60%">60%</div>
+            </div>
+            <div class="barra-container">
+                <span>Ficção</span> <div class="barra" style="width:75%">75%</div>
+            </div>
+            <div class="barra-container">
+                <span>Terror</span> <div class="barra" style="width:50%">50%</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SEÇÃO QUIZ ==================== -->
+    <section id="quiz" class="quiz">
+        <h2>🧠 Quiz: O quanto você sabe sobre cinema?</h2>
+        <form id="quizForm">
+            <div class="pergunta">
+                <p>1. Qual foi o primeiro filme com som sincronizado?</p>
+                <label><input type="radio" name="q1" value="a"> O Cantor de Jazz</label>
+                <label><input type="radio" name="q1" value="b"> Tempos Modernos</label>
+                <label><input type="radio" name="q1" value="c"> O Mágico de Oz</label>
+            </div>
+            <div class="pergunta">
+                <p>2. Quem dirigiu "Cidadão Kane", frequentemente considerado o melhor filme de todos os tempos?</p>
+                <label><input type="radio" name="q2" value="a"> Orson Welles</label>
+                <label><input type="radio" name="q2" value="b"> Alfred Hitchcock</label>
+                <label><input type="radio" name="q2" value="c"> Stanley Kubrick</label>
+            </div>
+            <div class="pergunta">
+                <p>3. Em que ano ocorreu a primeira exibição cinematográfica dos irmãos Lumière?</p>
+                <label><input type="radio" name="q3" value="a"> 1900</label>
+                <label><input type="radio" name="q3" value="b"> 1895</label>
+                <label><input type="radio" name="q3" value="c"> 1910</label>
+            </div>
+            <div class="pergunta">
+                <p>4. Qual filme foi o primeiro a usar efeitos especiais em computação gráfica (CGI) de forma marcante?</p>
+                <label><input type="radio" name="q4" value="a"> Jurassic Park</label>
+                <label><input type="radio" name="q4" value="b"> Toy Story</label>
+                <label><input type="radio" name="q4" value="c"> Tron</label>
+            </div>
+            <div class="pergunta">
+                <p>5. Qual ator estrelou filmes como "O Poderoso Chefão" e "O Selvagem da Motocicleta"?</p>
+                <label><input type="radio" name="q5" value="a"> Marlon Brando</label>
+                <label><input type="radio" name="q5" value="b"> Al Pacino</label>
+                <label><input type="radio" name="q5" value="c"> Robert De Niro</label>
+            </div>
+            <button type="submit" class="btn">Verificar respostas</button>
+        </form>
+        <div id="resultadoQuiz" class="resultado"></div>
+    </section>
+
+    <!-- ==================== SEÇÃO INTERAÇÃO (FORMULÁRIOS) ==================== -->
+    <section id="interacao" class="interacao">
+        <h2>✉️ Participe e dê sua opinião</h2>
+        <div class="form-container">
+            <!-- Inscrição no site -->
+            <div class="card">
+                <h3>Inscreva-se no site</h3>
+                <form id="formInscricao">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit" class="btn-small">Inscrever</button>
+                </form>
+            </div>
+            <!-- Assinar jornal -->
+            <div class="card">
+                <h3>Assine nosso jornal</h3>
+                <form id="formJornal">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit" class="btn-small">Assinar</button>
+                </form>
+            </div>
+            <!-- Deixar comentário -->
+            <div class="card">
+                <h3>Deixe um comentário</h3>
+                <form id="formComentario">
+                    <textarea placeholder="Escreva aqui..." rows="3" required></textarea>
+                    <button type="submit" class="btn-small">Enviar</button>
+                </form>
+            </div>
+            <!-- Avaliação com emojis -->
+            <div class="card">
+                <h3>Avalie o site (1 a 10)</h3>
+                <div class="emojis-avaliacao">
+                    <span data-nota="1">😡</span>
+                    <span data-nota="2">🙁</span>
+                    <span data-nota="3">😐</span>
+                    <span data-nota="4">🙂</span>
+                    <span data-nota="5">😊</span>
+                    <span data-nota="6">😄</span>
+                    <span data-nota="7">😍</span>
+                    <span data-nota="8">🤩</span>
+                    <span data-nota="9">🥳</span>
+                    <span data-nota="10">🎬</span>
+                </div>
+                <p id="notaEscolhida">Clique em um emoji para avaliar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RODAPÉ ==================== -->
+    <footer>
+        <p>Projeto de Daniany - 2º ano Ensino Médio 💜</p>
+        <p>Baseado nos slides sobre cinema | Todos os direitos reservados (imagens ilustrativas)</p>
+    </footer>
+
+    <!-- Link para o JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
